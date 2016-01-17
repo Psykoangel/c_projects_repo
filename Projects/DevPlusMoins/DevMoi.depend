@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1321454226 source:c:\users\exia_michael\cb_projects\devmoi\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

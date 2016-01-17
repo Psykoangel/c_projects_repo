@@ -1,0 +1,23 @@
+ALGORITHME : plus grande valeur
+//BUT : trouve la plus grande valeur contenue dans un tableau
+//ENTREE : euh ... rien
+//SORTIE : la plus grande valeur du tableau ^^
+
+
+VAR:
+valeur:ENTIER
+mon_premier_tableau[0..9]<-{4,7,2,5,1,6,8,9,3,10}:ENTIER
+
+
+DEBUT
+
+valeur <-- mon_premier_tableau[0]
+
+POUR (i=1, i<10, i++)
+	SI (valeur < mon_premier_tableau[i] )
+	ALORS	valeur <-- mon_premier_tableau[i]
+	FINSI
+FINPOUR
+
+ECRIRE (valeur)
+FIN

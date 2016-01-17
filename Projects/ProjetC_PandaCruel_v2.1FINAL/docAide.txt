@@ -1,0 +1,37 @@
+
+  --- Principe du jeu ---
+
+Deux joueurs sont a la recherche du Panda cruel dans le labyrinthe infernal, en se servant de pouvoirs dissemines ca et la dans les couloirs.
+Ils doivent faire preuve de strategie, et de rapidite pour etre le premier a se faire manger par le Panda cruel, car cette fusion magique l'elevera au rang 
+ultime de ''Harry Trotteur'' et la partie est terminee.
+
+
+  --- Regles du jeu ---
+
+A chaque coup joue, le joueur peut se deplacer dans le labyrinthe, en ligne 
+droite d'autant de cases qu'il le souhaite, vers la droite, la gauche, le haut 
+ou le bas. (Il est donc oblige d'attendre le coup suivant s'il arrive dans un 
+tournant.)
+Si un joueur ordonne une trajectoire qui rencontre un mur ou un autre joueur, 
+celui-ci s'arrete.
+Dans le labyrinthe se trouvent des potions permettant de traverser les murs. Les potions sont utilisees automatiquement : attention donc a ne pas en perdre une par megarde.
+Sont disseminees aussi deux capes d'invisibilite. 
+Si un joueur ramasse deux capes, il n'en reste plus pour son adversaire. 
+Le joueur invisible ne se voit pas lui-meme, et doit donc jouer a l'aveugle et de memoire.
+Le joueur invisible peut deposer sa cape quand il le desire, il redevient 
+visible et la cape est a disposition a l'endroit ou elle est deposee. Cette 
+operation compte pour un coup joue.
+Le joueur s'empare d'une cape ou d'une fiole, simplement si elle se trouve sur 
+sa trajectoire.
+
+
+  --- Controles ---
+
+Les joueurs commandent leur action a tour de role, a l'aide de codes simple 
+tapes au clavier : 
+
+-	D5 : deplacement de 5 cases a droite
+-	G8 : deplacement de 8 cases a gauche
+-	H3 : deplacement de 3 cases vers le haut
+-	B2 : deplacement de 2 cases vers le bas
+-	C : ouvrir le menu des capes (s'il en possede au moins une)

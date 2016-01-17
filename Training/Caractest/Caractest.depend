@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1323085024 source:c:\users\exia_michael\cb_projects\caractest\main.c
+	<stdio.h>
+	<stdlib.h>
+

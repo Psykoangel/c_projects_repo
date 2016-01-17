@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="F_Vérif&apos;.c" open="1" top="1" tabpos="10">
+		<Cursor position="290" topLine="501" />
+	</File>
+	<File name="F_conversion_Tableau.c" open="1" top="0" tabpos="7">
+		<Cursor position="767" topLine="0" />
+	</File>
+	<File name="Jeu.c" open="1" top="0" tabpos="6">
+		<Cursor position="219" topLine="0" />
+	</File>
+	<File name="Jeu.h" open="1" top="0" tabpos="14">
+		<Cursor position="293" topLine="0" />
+	</File>
+	<File name="Sauvegarde.c" open="1" top="0" tabpos="16">
+		<Cursor position="1786" topLine="24" />
+	</File>
+	<File name="Tour.c" open="1" top="0" tabpos="8">
+		<Cursor position="2037" topLine="78" />
+	</File>
+	<File name="Tour.h" open="1" top="0" tabpos="15">
+		<Cursor position="460" topLine="0" />
+	</File>
+	<File name="aide.c" open="1" top="0" tabpos="4">
+		<Cursor position="973" topLine="0" />
+	</File>
+	<File name="intro.c" open="1" top="0" tabpos="5">
+		<Cursor position="67" topLine="0" />
+	</File>
+	<File name="main.c" open="1" top="0" tabpos="1">
+		<Cursor position="552" topLine="0" />
+	</File>
+	<File name="main.h" open="1" top="0" tabpos="12">
+		<Cursor position="625" topLine="0" />
+	</File>
+	<File name="menu.c" open="1" top="0" tabpos="2">
+		<Cursor position="3078" topLine="0" />
+	</File>
+	<File name="menu.h" open="1" top="0" tabpos="13">
+		<Cursor position="480" topLine="0" />
+	</File>
+	<File name="panda.c" open="1" top="0" tabpos="3">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="quitter jeux.c" open="1" top="0" tabpos="11">
+		<Cursor position="1266" topLine="15" />
+	</File>
+	<File name="saisie.c" open="1" top="0" tabpos="9">
+		<Cursor position="0" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

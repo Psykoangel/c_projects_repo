@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int FctAdd(int x, int y)
+{
+    int ResInter;
+    ResInter = x+y;
+    return ResInter;
+}
+
+int FctRmv(int x, int y)
+{
+	return x-y;
+
+}
+
+ main()
+{
+   int Addition , Soustraction , Nombre1 = 0, Nombre2 = 0;
+
+  // On demande les nombres 1 et 2 à l'utilisateur :
+
+  printf("Entrez le nombre 1 : ");
+  scanf("%d", &Nombre1);
+  printf("Entrez le nombre 2 : ");
+  scanf("%d", &Nombre2);
+
+  // On fait le calcul :
+
+  Addition = FctAdd(Nombre1, Nombre2);
+  Soustraction = FctRmv(Nombre1, Nombre2);
+
+  // Et on affiche l'addition à l'écran :
+
+  printf ("%d + %d = %d\n", Nombre1, Nombre2, Addition);
+  printf ("%d - %d = %d\n", Nombre1, Nombre2, Soustraction);
+
+  return 0;
+}

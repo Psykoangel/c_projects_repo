@@ -1,0 +1,70 @@
+Algorithme : PLONGEUR
+//BUT : Etant donné la vitesse de remontée et la profondeur, sortir une table des paliers
+//ENTREE : La profondeur
+//SORTIE : La table des paliers de décompression
+
+CONST:
+	
+
+VAR :
+	profondeur : ENTIER 		// en m
+	vitesse_de_remontee : REEL 	// en m/s
+	temps_global : REEL
+	palier : REEL
+
+DEBUT
+	ECRIRE ("Entrez la vitesse de remontée")
+	LIRE (vitesse_de_remontee)
+	ECRIRE ("Entrez la profondeur")
+	LIRE (profondeur)
+	
+	Temps_global <- 0
+	palier <- 0
+	
+	SI (profondeur > 30) et (profondeur mod 10 <> 0)
+	
+		ALORS Temps_global <- (profondeur mod 10)/vitesse_de_remontee
+		palier <- ((profondeur-(profondeur mod10))-30)/10*25
+		ECRIRE ("Arrêtez-vous après"+profondeur mod 10+"pendant"+palier+", vous y parviendrez après"+ Temps_global +"de natation")
+	
+	profondeur <- profondeur - (profondeur mod 10)
+	Temps_global <- Temps_global + palier
+	
+	FINSI
+	
+	TANTQUE profondeur > 30 
+			
+		profondeur <- profondeur - 10
+		Temps_global <- Temps_global + 10/vitesse_de_remontee
+		palier <- 100+(profondeur-30)/10)*25
+		ECRIRE ("Arrêtez-vous après"+ profondeur +"pendant"+ palier +", vous y parviendrez après"+ Temps_global +"de natation")
+		
+	Temps_global <- Temps_global + palier
+	
+	FINTANTQUE
+	
+	SI (profondeur = 30)
+		
+		profondeur <- 30
+		Temps_global <- Temps_global + 100
+		palier <- 100
+		ECRIRE ("Arrêtez-vous après"+ profondeur +"mètres pendant"+ palier +"secondes, vous y parviendrez après"+ Temps_global +"de natation")
+		
+	Temps_global <- (Temps_global + 3)/vitesse
+		
+	FINSI
+	
+	TANTQUE (0 < profondeur < 30)
+	
+		profondeur <- profondeur - 3
+		Temps_global <- Temps_global + 3/vitesse_de_remontee 
+		palier <- 100-((30-profondeur)/3)*10
+		ECRIRE ("Arrêtez-vous après"+ profondeur +"mètres pendant"+ palier +"secondes, vous y parviendrez après"+ Temps_global +"de natation")
+		
+
+	
+	FINTANTQUE
+	
+FIN
+		
+		

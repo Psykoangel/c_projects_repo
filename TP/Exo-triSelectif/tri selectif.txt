@@ -1,0 +1,29 @@
+ALGORITHME : tri selectif
+
+VAR
+
+T[0..200]:entier
+i,j:entier   //variables de parcours de tableau
+n:entier     //cense etre egal a 200
+indice:entier    //contient l'indice de la case contenant la valeur la plus petite
+tmp:entier       //temporaire
+
+DEBUT
+
+pour i=1 a n faire
+	//recherche de la plus petite valeur
+	indice <-- (i-1)
+	pour j=1 a n-(i-1) faire
+		si T[indice] > T[i-1 + j]
+		alors indice <-- i - 1 + j
+		finsi
+	finpour
+
+	//echange de valeur
+	tmp <-- T[i-1]
+	T[i-1] <-- T[indice]
+	T[indice] <-- tmp
+
+finpour
+
+FIN

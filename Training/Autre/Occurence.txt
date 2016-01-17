@@ -1,0 +1,63 @@
+
+**********************************
+
+occurences
+etape 1 :
+	si T[0]=0 cpt0 <- cpt0 + 1
+	si T[0]=1 cpt1 <- cpt1 + 1
+	.
+	:
+
+	si T[0]=9 cpt9 <- cpt9 + 1
+
+
+etape 2 :
+	si T[1]=0 cpt0 <- cpt0 + 1
+	si T[1]=1 cpt1 <- cpt1 + 1
+	.
+	.
+	.
+	si T[1]=9 cpt9 <- cpt9 + 1
+
+etape 3 :
+	si T[2]=0 cpt0 <- cpt0 + 1
+
+.
+.
+.
+.
+
+etape i :
+	si T[i]=0 cpt0 <- cpt0 + 1
+
+....
+
+1 000 000 000
+
+
+ALGO :
+
+
+cpt0 = 0
+cpt1 = 0
+....
+cpt9 = 0
+
+pour i=1 a 1 000 000 000 faire
+	si T[i-1]=0 alors cpt0<-cpt0+1
+	.....
+
+	si T[i-1]=9 alors cpt9<-cpt9+1
+finpour
+
+ALGO 2 :
+
+cpt[0 ... 9]: ENTIER
+
+DEBUT
+pour i=0 a 9 faire
+	cpt[i]=0
+finpour
+
+pour i=1 a 1 000 000 000 faire
+	si T[i-1]=0 alors cpt[0]= cpt[0]+1

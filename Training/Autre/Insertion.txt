@@ -1,0 +1,87 @@
+VAR 
+
+T[0..n]:ENTIER
+cpt[0..n] : ENTIER
+i : ENTIER
+
+ETAPE 1 : cpt[0]<--T[0]
+ETAPE 1 : SI T[1]<T[0]
+		ALORS 	tmp<- T[N]
+			T[N]<- T[N+1]
+			T[N+1]<- tmp
+		FINSI
+
+ETAPE 2 : insérer T[2] dans T[0 .... 1]
+ETAPE 2 : SI T[N] >= T[N-1]
+		ALORS ON ARRETE
+		SINON ECHANGE
+
+
+ETAPE 3 : insérer T[3] dans T[0 .... 2]
+ETAPE 3 : SI T[N] >= T[N-2]
+		ALORS ON ARRETE 
+		SINON ON ECHANGE
+
+
+ETAPE 4 : insérer T[4] dans T[0 .... 3]
+
+....
+
+ETAPE i : insérer T[i] dans T[0 .... i-1]
+ETAPE i : SI T[N+1)-i] >= T[(N+1) - i-1]
+		ALORS ON ARRETE
+		SINON ON ECHANGE
+
+....
+
+ETAPE n-1 : insérer T[n-1] dans T[0 .... n-2]
+ETAPE N ; SI T[1] >= T[0]
+		ALORS ON ARRETE 
+		SINON ON ECHANGE
+
+
+
+
+POUR i=1 à n-1 FAIRE 
+	INSERER T[i] dans T[0 ... i-1]
+FINPOUR
+
+
+
+POUR i=1 à n-1 faire 
+	pour j=1 à (i-1) faire
+		si T[i-j] >= T[i-j-1]
+		alors arreter
+		sinon 	tmp <- T[i-j]
+			T[i-j] <- T[i-j-1]
+			T[i-j-1]<- tmp
+		finsi
+	fin pour
+fin pour
+
+_____________________________________
+
+
+Version 2 !!!
+
+
+POUR i=1 à n-1 faire 
+	j=0
+	tantque((j<=(i-1)) et T[i-j]<T[i-j-1])
+	faire
+		tmp<-T[i-j]
+		T[i-j] <- T[i-j-1]
+		T[i-j-1] <- tmp
+		j <- j+1
+	fin TANTQUE
+FINpour
+
+
+EXEMPLE WHILE
+
+while((1>0)&&(3>2))
+{
+	j=j+1;
+	printf("je boude")
+}
+

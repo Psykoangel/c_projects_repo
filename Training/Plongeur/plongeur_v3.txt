@@ -1,0 +1,58 @@
+ALGORITHME: plongeur
+//BUT: trouver pour une profondeur donnee, le temps global des paliers
+//ENTREE: la profondeur, vitesse de remontee
+//SORTIE: tous les paliers et le temps de remontee
+
+VAR: 
+	temps_global :ENTIER
+	profondeur :ENTIER
+	vitesse :REEL		//exprimee en m/s
+
+
+DEBUT: 
+
+		
+	temps_global <-- 0 
+	lire (profondeur)
+	lire (vitesse)
+
+
+	SI (profondeur > 30)
+		ECRIRE ("premier palier apres", profondeur MODULO (10), "s'y arreter", 
+(profondeur/10)*25+25, "vous y serez apres", profondeur MODULO (10)/vitesse)
+		profondeur <-- profondeur- (profondeur MODULO (10))
+
+		TANTQUE (profondeur >30 )
+			ECRIRE ("palier a : " profondeur)
+			ECRIRE ("palier de :" (profondeur/10)*25
+			temps_global <-- temps_global + (profondeur/10)*25 + 10/vitesse
+			profondeur <-- profondeur - 10
+		FINTANTQUE
+
+		ECRIRE ("palier a : 30, palier de : 100")
+		temps_global <-- temps_global + 100
+		profondeur <-- profondeur -3
+
+
+	FINSI
+
+	
+
+	SI (profondeur < 30)
+	ALORS
+		ECRIRE ("premier palier apres", profondeur MODULO (3), "s'y arreter",
+ (profondeur/3)*10, "vous y serez apres", profondeur MODULO (3)/vitesse)
+		profondeur <-- profondeur - (profondeur MODULO (3))
+
+		TANTQUE (profondeur > 0)
+			ECRIRE ("palier a :", profondeur)
+			ECRIRE ("palier de :" (profondeur/3)*10)
+			temps_global <-- temps_global + (profondeur/3)*10 + 3/vitesse
+			profondeur <-- profondeur -3
+		FINTANTQUE
+
+		ECRIRE (temps_global)
+
+	FINSI
+
+FIN

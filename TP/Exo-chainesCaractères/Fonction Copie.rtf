@@ -1,0 +1,44 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf270
+{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red100\green56\blue32;\red196\green26\blue22;\red170\green13\blue145;
+\red0\green116\blue0;\red28\green0\blue207;\red46\green13\blue110;\red38\green71\blue75;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab480
+\pard\tx480\pardeftab480\ql\qnatural\pardirnatural
+
+\f0\fs20 \cf2 \CocoaLigature0 #include \cf3 <stdio.h>\cf2 \
+#include \cf3 <stdlib.h>\cf2 \
+\cf0 \
+\cf4 long\cf0  longueur(\cf4 char\cf0  text[]) \cf5 /*Calcule la longueur d'une chaine*/\cf0 \
+ \{\
+\cf4 	long\cf0  i;\
+\cf4 	for\cf0 (i=\cf6 0\cf0 ; text[i] != \cf6 '\\0'\cf0 ; i++);\
+\cf4 	return\cf0  i;\
+\}\
+\
+\cf4 char\cf0 * copie(\cf4 char\cf0  texte[])\
+\{\
+\cf4 	long\cf0  i;\
+\cf4 	char\cf0  *chaineCopie;\
+	chaineCopie =(\cf4 char\cf0  *) \cf7 malloc\cf0 (\cf8 longueur\cf0 (texte) +\cf6 1\cf0 );\
+\cf4 	for\cf0  (i=\cf6 0\cf0 ; texte[i] != \cf6 '\\0'\cf0 ; i++) \
+	\{\
+		*(chaineCopie+i) = texte[i];\
+	\}\
+	*(chaineCopie+i) = \cf6 '\\0'\cf0 ;\
+\cf4 return\cf0  chaineCopie;\
+\}\
+\
+\
+\
+\
+\
+\cf4 int\cf0  main (\cf4 int\cf0  argc, \cf4 const\cf0  \cf4 char\cf0  * argv[]) \
+\{\
+   \cf4 char\cf0  text[\cf6 100\cf0 ];\
+   \cf7 printf\cf0 (\cf3 "Ecrivez un mot pour obtenir une copie\\n"\cf0 );\
+   \cf7 scanf\cf0 (\cf3 "%s"\cf0 , text);\
+   \cf7 printf\cf0 (\cf3 "La copie de %s est %s\\n"\cf0 , text, \cf8 copie\cf0 (text));\
+   \cf4 return\cf0  \cf6 0\cf0 ;\
+\}\
+}

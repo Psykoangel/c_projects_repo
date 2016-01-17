@@ -1,0 +1,3 @@
+pour compiler le code source de pi:
+le fait qu'on utilise la librairie math, il faut utiliser cette commande:
+gcc -lm .....c -o nouveaunom

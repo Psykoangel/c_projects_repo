@@ -1,0 +1,10 @@
+int recherche(char chaine[], char cherche[], int pos){
+	int i, k;
+
+	for(i=pos;chaine[i] != '\0';i++){
+		for(k=0;(chaine[i+k] == cherche[k]) && (cherche[k] != '\0' )&& (chaine[i+k] != '\0');k++);
+		if(cherche[k] == '\0')	return i;
+		}
+
+	return -1;
+	}
